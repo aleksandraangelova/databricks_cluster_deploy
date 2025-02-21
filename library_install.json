@@ -1,0 +1,8 @@
+{
+  "cluster_id": "${CLUSTER_ID}",
+  "libraries": [
+    {
+      "whl": "${LATEST_WHL_FILE}"
+    }
+  ]
+}
