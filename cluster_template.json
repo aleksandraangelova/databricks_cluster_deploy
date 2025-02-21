@@ -1,0 +1,36 @@
+{
+  "autoscale": {
+    "min_workers": 1,
+    "max_workers": 2
+  },
+  "cluster_name": "cluster_deploy_demo",
+  "spark_version": "15.4.x-scala2.12",
+  "spark_conf": {
+    "spark.databricks.delta.preview.enabled": "true",
+    "spark.databricks.sql.initial.catalog.name": "hive_metastore"
+  },
+  "azure_attributes": {
+    "first_on_demand": 1,
+    "availability": "ON_DEMAND_AZURE",
+    "spot_bid_max_price": -1
+  },
+  "node_type_id": "Standard_DS4_v2",
+  "driver_node_type_id": "Standard_DS4_v2",
+  "ssh_public_keys": [],
+  "custom_tags": {
+    "UC_ENABLED": "true"
+  },
+  "spark_env_vars": {
+    "PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+  },
+  "init_scripts": [
+    {
+      "workspace": {
+        "destination": "/Users/<username>/.bundle/cdpdev/dev/files/init_script.sh"
+      }
+    }
+  ],
+  "autotermination_minutes": 20,
+  "enable_elastic_disk": true,
+  "data_security_mode": "SINGLE_USER"
+}
